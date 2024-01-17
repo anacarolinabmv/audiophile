@@ -5,4 +5,7 @@
 *.xd
 
 /node_modules
+/dist
 .parcel_cache
+.parcel-cache/data.mdb
+.parcel-cache/lock.mdb
