@@ -3,7 +3,9 @@
 .h3,
 .h4,
 .h5,
-.h6 {
+.h6,
+.overline,
+.sub-title {
   text-transform: uppercase;
   font-style: normal;
 }
@@ -63,6 +65,27 @@
   font-weight: 700;
   line-height: 2.5rem; /* 192.308% */
   letter-spacing: 0.929px;
+}
+
+.body {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.5rem; /* 166.667% */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation: fadeIn 3s ease-out;
 }
 
 .btn {
@@ -134,6 +157,101 @@ html {
 
 html {
   font-family: "Manrope", sans-serif;
+}
+
+.header {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: min-content auto;
+  background-image: url(/assets/home/desktop/image-hero.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.header__content {
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+.header__content--text {
+  grid-column: 1/7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+}
+.header__content--text .overline {
+  opacity: 0.5;
+}
+.header__content--text .body {
+  opacity: 0.75;
+  width: 100%;
+  max-width: 35rem;
+}
+
+.mt-sm {
+  margin-top: 2.4rem;
+}
+
+.mt-md {
+  margin-top: 4rem;
+}
+
+.navbar {
+  grid-column: 2/-2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem; /* 192.308% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.navbar__links {
+  display: flex;
+  gap: 3.4rem;
+  list-style: none;
+}
+.navbar__link:link, .navbar__link:visited {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+}
+.navbar__link:link:hover, .navbar__link:visited:hover {
+  color: #d87d4a;
+}
+.navbar__logo {
+  display: flex;
+}
+.navbar__cart {
+  display: flex;
+}
+.navbar__cart__link:link, .navbar__cart__cart:visited {
+  display: inline-block;
+  height: 2rem;
+  width: 2.3rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  background-color: #fff;
+  -webkit-mask-image: url(/assets/shared/desktop/icon-cart.svg);
+  mask-image: url(/assets/shared/desktop/icon-cart.svg);
+}
+.navbar__cart__link:link:hover, .navbar__cart__cart:visited:hover {
+  background-color: #d87d4a;
+}
+
+.home {
+  display: grid;
+  grid-template-rows: 90vh auto;
+  grid-template-columns: 1fr repeat(12, minmax(min-content, 6.5rem)) 1fr;
+  column-gap: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

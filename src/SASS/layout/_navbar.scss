@@ -1,0 +1,63 @@
+.navbar {
+  grid-column: 2/-2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 3.2rem 0;
+  border-bottom: 1px solid rgba($white, 0.5);
+
+  color: $white;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem; /* 192.308% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  &__links {
+    display: flex;
+    gap: 3.4rem;
+
+    list-style: none;
+  }
+  &__link:link,
+  &__link:visited {
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $orange-dark;
+    }
+  }
+
+  &__logo {
+    display: flex;
+  }
+
+  &__cart {
+    display: flex;
+
+    &__link:link,
+    &__cart:visited {
+      display: inline-block;
+
+      height: 2rem;
+      width: 2.3rem;
+
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+      background-color: $white;
+      -webkit-mask-image: url(/assets/shared/desktop/icon-cart.svg);
+      mask-image: url(/assets/shared/desktop/icon-cart.svg);
+
+      &:hover {
+        background-color: $orange-dark;
+      }
+    }
+  }
+}

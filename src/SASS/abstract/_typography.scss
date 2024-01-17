@@ -3,7 +3,9 @@
 .h3,
 .h4,
 .h5,
-.h6 {
+.h6,
+.overline,
+.sub-title {
   text-transform: uppercase;
   font-style: normal;
 }
@@ -60,4 +62,10 @@
   font-weight: 700;
   line-height: 2.5rem; /* 192.308% */
   letter-spacing: 0.929px;
+}
+
+.body {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.5rem; /* 166.667% */
 }
