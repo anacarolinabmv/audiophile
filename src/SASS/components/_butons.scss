@@ -1,0 +1,71 @@
+.btn {
+  padding: 1.5rem 3rem;
+  border: 1px solid;
+
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &--orange {
+    background-color: $orange-dark;
+    border-color: $orange-dark;
+
+    color: $white;
+
+    &:hover {
+      background-color: $orange-light;
+      border-color: $orange-light;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    border-color: $black;
+
+    $color: $black;
+
+    &:hover {
+      background-color: $black;
+      $color: $white;
+    }
+  }
+
+  &-inline {
+    position: relative;
+
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    color: rgba($black, 0.5);
+
+    &::after {
+      background-color: red;
+      content: '';
+      position: absolute;
+      top: 0;
+
+      width: 2.3rem;
+      height: 100%;
+
+      background-color: $orange-dark;
+      -webkit-mask-image: url(/assets/icons/chevron.svg);
+      mask-image: url(/assets/icons/chevron.svg);
+      -webkit-mask-size: contain;
+      mask-image: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: right 0;
+      mask-position: right 0;
+    }
+
+    &:hover {
+      color: $orange-dark;
+    }
+  }
+}

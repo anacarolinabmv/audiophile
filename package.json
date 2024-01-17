@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "compile": "sass --watch src/SASS/main.scss src/CSS/style.css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.11.0"
+  },
+  "devDependencies": {
+    "sass": "^1.69.7"
+  }
 }
